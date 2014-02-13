@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  refresh_date: 2014-02-10
+  refresh_type: MyString
+  env_id: 1
+
+two:
+  refresh_date: 2014-02-12
+  refresh_type: MyString
+  env_id: 2

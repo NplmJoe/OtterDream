@@ -1,0 +1,29 @@
+<%= form_for(@refresh) do |f| %>
+  <% if @refresh.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@refresh.errors.count, "error") %> prohibited this refresh from being saved:</h2>
+
+      <ul>
+      <% @refresh.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :refresh_date %><br>
+    <%= f.date_select :refresh_date %>
+  </div>
+  <div class="field">
+    <%= f.label :refresh_type %><br>
+    <%= f.text_field :refresh_type %>
+  </div>
+  <div class="field">
+    <%= f.label :env_id %><br>
+    <%= f.collection_select(:env_id, Env.all, :id, :name) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

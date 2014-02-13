@@ -1,0 +1,31 @@
+<h1>Listing refreshes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Refresh date</th>
+      <th>Refresh type</th>
+      <th>Env</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @refreshes.each do |refresh| %>
+      <tr>
+        <td><%= refresh.refresh_date %></td>
+        <td><%= refresh.refresh_type %></td>
+        <td><%= refresh.env.name %></td>
+        <td><%= link_to 'Show', refresh %></td>
+        <td><%= link_to 'Edit', edit_refresh_path(refresh) %></td>
+        <td><%= link_to 'Destroy', refresh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Refresh', new_refresh_path %>

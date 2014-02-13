@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Refresh date:</strong>
+  <%= @refresh.refresh_date %>
+</p>
+
+<p>
+  <strong>Refresh type:</strong>
+  <%= @refresh.refresh_type %>
+</p>
+
+<p>
+  <strong>Env:</strong>
+  <%= @refresh.env.name %>
+</p>
+
+<%= link_to 'Edit', edit_refresh_path(@refresh) %> |
+<%= link_to 'Back', refreshes_path %>

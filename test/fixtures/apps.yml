@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Unique
+  description: MyText
+  dev_lead: MyString
+  env_support_lead: MyString
+
+two:
+  name: "Also Unique"
+  description: MyText
+  dev_lead: MyString
+  env_support_lead: MyString
